@@ -1,36 +1,47 @@
 
 import "./styles/styles.scss"
 import Curso from "./Curso.jsx"
+import Banner from "./Banner";
+import Formulario from "./Formulario";
+
+const Cursos=[
+
+{
+  "image":"https://edteam-media.s3.amazonaws.com/courses/small/3ec614b5-a9b7-475c-bf8f-8ba643a129eb.png",  
+  "image2":"https://edteam-media.s3.amazonaws.com/courses/small/3ec614b5-a9b7-475c-bf8f-8ba643a129eb.png", 
+  "nombre":"Alfonso Montalvo",
+  "price":40
+
+},
+{
+  "image":"https://edteam-media.s3.amazonaws.com/courses/big/85d3d7e4-19db-4cff-a4cb-cbead813b6b5.png",  
+  "image2":"https://edteam-media.s3.amazonaws.com/courses/small/3ec614b5-a9b7-475c-bf8f-8ba643a129eb.png", 
+  "nombre":"Luis Montalvo",
+  "price":50
+
+},
+{
+  "image":"https://edteam-media.s3.amazonaws.com/courses/big/61e5a210-8dab-412e-a6dc-802c070cc18c.jpg",  
+  "image2":"https://edteam-media.s3.amazonaws.com/courses/small/3ec614b5-a9b7-475c-bf8f-8ba643a129eb.png", 
+  "nombre":"Alfonso",
+  "price":60
+
+}
+
+
+]
 
 function App() {
   return (
 <>
-<div className="main-banner img-container l-section" id="main-banner">
-<div className="ed-grid lg-grid-6">
-  <div className="lg-cols-4 lg-x-2">
-    <img className="main-banner__img" src="https://wallpaperset.com/w/full/a/4/6/49091.jpg" alt="ciudad-edificios"/>
-    <div className="main-banner__data s-center">
-      <p className="t2 s-mb-0">Curso de EDteam</p>
-      <p> React JS</p>
-      <a href="https://koolgram.com" className="button">Ver mas</a>
-    </div>
-  </div>
-</div>
-</div>
+<Banner />
 <div className="ed-grid m-grid-3">
-<Curso />
-<Curso />
-<Curso />
-<Curso />
-<Curso />
-<Curso />
+{
+Cursos.map(c=><Curso image={c.image} image2={c.image2} nombre={c.nombre} price={c.price}/>)
 
+}</div>
 
-
-
-</div>
-
-
+<Formulario nombre="Alfonso" correo="alfonso.montalvo.m@gmail.com"/>
 
 </>
   );

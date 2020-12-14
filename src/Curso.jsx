@@ -1,31 +1,55 @@
 import React from "react"
+import PropTypes from 'prop-types'
 
-const Curso=()=>(
+// const curso={"title":"Javascript",
+// "image":"https://edteam-media.s3.amazonaws.com/courses/small/3ec614b5-a9b7-475c-bf8f-8ba643a129eb.png",
+// "image2":"https://edteam-media.s3.amazonaws.com/courses/small/3ec614b5-a9b7-475c-bf8f-8ba643a129eb.png",
+// "nombre":"Alfonso Montalvo"
+
+// }
+
+
+const Curso=({image,title,image2,nombre,price})=>(
 
 <article className="card">
   <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-    <img src="https://edteam-media.s3.amazonaws.com/courses/small/3ec614b5-a9b7-475c-bf8f-8ba643a129eb.png" alt="curso de Go"/>
+    <img src={image} alt={title}/>
   </div>
   <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
     <h3 className="t5 s-mb-2 s-center">
-      Programación orientada a objetos con Go
     </h3>
     <div className="s-mb-2 s-main-center">
       <div className="card__teacher s-cross-center">
         <div className="card__avatar s-mr-1">
           <div className="circle img-container">
-            <img src="https://edteam-media.s3.amazonaws.com/users/thumbnail/952327c3-2bd9-41d1-819e-9b5d7eb84c13.jpg" alt=""/>
+            <img src={image2} alt=""/>
           </div>
         </div>
-        <span className="small">Alexys Lozada</span>
+        <span className="small">{nombre}</span>
       </div>
     </div>
     <div className="s-main-center">
-      <a className="button--ghost-alert button--tiny" href="https://koolgram.com">$ 20USD</a>
+<a className="button--ghost-alert button--tiny" href="https://koolgram.com">$ {price}</a>
     </div>
   </div>
 </article>
 )
 
+Curso.propTypes={
+  image:PropTypes.string,
+  title:PropTypes.string,
+  image2:PropTypes.string,
+  nombre:PropTypes.string,
+  price:PropTypes.number
+  }
+  
+Curso.defaultProps={
+  image:"https://static.vecteezy.com/system/resources/previews/001/225/556/non_2x/grayscale-of-city-buildings-free-photo.jpeg",
+  title:"Titulo standard",
+  image2:"https://static.vecteezy.com/system/resources/previews/001/225/556/non_2x/grayscale-of-city-buildings-free-photo.jpeg",
+  nombre:"No se encontro imagen",
+  price:40
+
+}
 
 export default Curso
