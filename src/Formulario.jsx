@@ -66,8 +66,8 @@ componentDidMount(){
     let elemento = document.getElementById("element")
     console.log(elemento)
 
-    this.intervaloFecha=setInterval(()=>{
-        this.cambiarFecha()},1000)
+    // this.intervaloFecha=setInterval(()=>{
+    //     this.cambiarFecha()},1000)
 }
 
 
