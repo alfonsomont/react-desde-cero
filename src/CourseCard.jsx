@@ -10,7 +10,7 @@ import {Link} from "react-router-dom"
 // }
 
 
-const Curso=({id,image,title,image2,nombre,price})=>(
+const CourseCard=({id,image,title,image2,nombre,price})=>(
 
 <article className="card">
   <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
@@ -36,7 +36,7 @@ const Curso=({id,image,title,image2,nombre,price})=>(
 </article>
 )
 
-Curso.propTypes={
+CourseCard.propTypes={
   image:PropTypes.string,
   title:PropTypes.string,
   image2:PropTypes.string,
@@ -44,7 +44,7 @@ Curso.propTypes={
   price:PropTypes.number
   }
   
-Curso.defaultProps={
+CourseCard.defaultProps={
   image:"https://static.vecteezy.com/system/resources/previews/001/225/556/non_2x/grayscale-of-city-buildings-free-photo.jpeg",
   title:"Titulo standard",
   image2:"https://static.vecteezy.com/system/resources/previews/001/225/556/non_2x/grayscale-of-city-buildings-free-photo.jpeg",
@@ -53,4 +53,4 @@ Curso.defaultProps={
 
 }
 
-export default Curso
+export default CourseCard

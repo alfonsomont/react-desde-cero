@@ -1,6 +1,6 @@
 import React from "react"
 
-const Cursos=[
+const Courses=[
 
     {  "id": 1,
       "image":"https://edteam-media.s3.amazonaws.com/courses/small/3ec614b5-a9b7-475c-bf8f-8ba643a129eb.png",  
@@ -28,7 +28,7 @@ const Cursos=[
 
 const Course = ({match}) =>{
 
-const cursoActual=Cursos.filter(c=>c.id === parseInt(match.params.id))[0]
+const cursoActual=Courses.filter(c=>c.id === parseInt(match.params.id))[0]
 
 return(
 
