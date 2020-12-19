@@ -1,10 +1,11 @@
 
-import "./styles/styles.scss"
-import Banner from "./Banner";
-import Form from "./Form";
-import CourseGrid from "./CourseGrid";
-import Course from "./Course";
-import MainMenu from "./MainMenu";
+import "./styles/styles.scss";
+import Home from "./components/pages/Home";
+import Form from "./components/pages/Form";
+import CourseGrid from "./components/organisms/CourseGrid";
+import Course from "./components/pages/Course";
+import MainMenu from "./components/organisms/MainMenu";
+import Users from "./components/pages/Users";
 
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 
@@ -16,9 +17,10 @@ function App() {
 <Router>
     <MainMenu />
     <Switch>
-      <Route path="/" exact component={Banner}/>
+      <Route path="/" exact component={Home}/>
       <Route path="/cursos/:id" component={Course}/>
       <Route path="/cursos" component={CourseGrid}/>
+      <Route path="/usuarios" component={Users}/>
       <Route path="/formulario" component={()=><Form />}/>
       <Route component={()=><div className="ed-grid">
 
