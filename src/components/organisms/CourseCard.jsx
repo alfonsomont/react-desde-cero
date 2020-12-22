@@ -2,12 +2,6 @@ import React from "react"
 import PropTypes from 'prop-types'
 import {Link} from "react-router-dom"
 
-// const curso={"title":"Javascript",
-// "image":"https://edteam-media.s3.amazonaws.com/courses/small/3ec614b5-a9b7-475c-bf8f-8ba643a129eb.png",
-// "image2":"https://edteam-media.s3.amazonaws.com/courses/small/3ec614b5-a9b7-475c-bf8f-8ba643a129eb.png",
-// "nombre":"Alfonso Montalvo"
-
-// }
 
 
 const CourseCard=({id,image,title,image2,nombre,price})=>(
