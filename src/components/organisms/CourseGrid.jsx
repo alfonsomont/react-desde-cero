@@ -18,4 +18,4 @@ const CourseGrid =({cursos})=>(
 
 )
 
-export default withLoader("cursos", CourseGrid)
+export default withLoader("cursos")(CourseGrid)
